@@ -31,7 +31,10 @@ class Mensagem extends StatelessWidget {
       ),
       actions: <Widget>[
         TextButton(
-          child: const Text('Ok'),
+          child: const Text(
+            'Ok',
+            style: TextStyle(fontSize: 16),
+          ),
           onPressed: () {
             Navigator.of(context).pop();
           },

@@ -82,4 +82,11 @@ class Informacoes {
       style: TextStyle(color: Colors.black, fontSize: 16),
     )
   ];
+
+  static final List<Widget> mensagemJogarNovamente = [
+    const Text(
+      "Quanta sorte. Você tirou dois dados iguais e poderá jogar novamente!",
+      style: TextStyle(color: Colors.black, fontSize: 16),
+    )
+  ];
 }
