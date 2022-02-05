@@ -72,7 +72,7 @@ $ flutter run
 
 ## 🛠 Recursos
 
-- [Flutter](https://flutter.dev): 2.8.3
+- [Flutter](https://flutter.dev): 2.8.1
 - [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter): 9.2.0
 - [lottie](https://pub.dev/packages/lottie): 1.2.1
 
