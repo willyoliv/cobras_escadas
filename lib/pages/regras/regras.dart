@@ -86,14 +86,14 @@ class Regras extends StatelessWidget {
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
               const Text(
-                '6 - Caso um jogador pare em uma casa em que está localizada a cabeça de'
+                '6 - Caso um jogador pare em uma casa em que está localizada a cabeça de '
                 'uma cobra, ele vai obrigatoriamente deve descer até o casa onde está a'
                 'ponta da cauda da cobra;',
                 style: TextStyle(color: Colors.black, fontSize: 16),
               ),
               const Text(
-                '7 - Um jogador deve cair exatamente na última casa (100) para vencer o jogo.'
-                'O primeiro jogador a fazer isso, vence. Mas se o somatório dos dados com a'
+                '7 - Um jogador deve cair exatamente na última casa (100) para vencer o jogo. '
+                'O primeiro jogador a fazer isso, vence. Mas se o somatório dos dados com a '
                 'casa atual for maior que 100, o jogador deve se movimentar para trás até a '
                 'contagem terminar, como se ele tivesse batido em uma parede e retornasse;',
                 style: TextStyle(color: Colors.black, fontSize: 16),

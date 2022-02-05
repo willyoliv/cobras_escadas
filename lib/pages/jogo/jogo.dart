@@ -242,7 +242,7 @@ class _JogoState extends State<Jogo> {
                         ),
                         TextSpan(
                             text:
-                                ' está na posição ${_cobrasEscadas.obterPosicaoAtualDoJogador()}.'),
+                                ' está na posição ${_cobrasEscadas.obterPosicaoAtualDoJogador() == 0 ? "inicial" : _cobrasEscadas.obterPosicaoAtualDoJogador()}.'),
                       ],
                     ),
                   ),
