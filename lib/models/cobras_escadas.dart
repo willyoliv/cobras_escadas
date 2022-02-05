@@ -8,6 +8,7 @@ class CobrasEscadas {
   late Jogador _jogador1;
   late Jogador _jogador2;
   bool _isJogadorInicial = true;
+  bool _hasGanhador = false;
 
   Jogador get jogador1 => _jogador1;
   Jogador get jogador2 => _jogador2;
@@ -15,8 +16,8 @@ class CobrasEscadas {
   bool get isJogadorInicial => _isJogadorInicial;
 
   CobrasEscadas() {
-    _jogador1 = Jogador("Jogador 1", 0);
-    _jogador2 = Jogador("Jogador 2", 0);
+    _jogador1 = Jogador("Azul", 0);
+    _jogador2 = Jogador("Vermelho", 0);
     _tabuleiro = Tabuleiro();
   }
 
@@ -27,15 +28,9 @@ class CobrasEscadas {
   }
 
   int girarDados() {
-    int menorValor = 1;
-    int maiorValor = 6;
-    var rn = Random();
-    return menorValor + rn.nextInt(maiorValor - menorValor + 1);
+    var random = Random();
+    return random.nextInt(6) + 1;
   }
-
-  // List<double> obterCoordanadas(int index) {
-  //   return _tabuleiro.obterCoordenadas(index);
-  // }
 
   List<List<double>> _obterCaminho(int posicaoFinal) {
     int posicaoInicial = obterPosicaoAtualDoJogador();
@@ -43,8 +38,7 @@ class CobrasEscadas {
 
     List<List<double>> caminho =
         _tabuleiro.obterCaminho(posicaoInicial, finalCaminho);
-    _atualizarPosicaoJogador(
-        _tabuleiro.movimentacoes.indexOf(caminho.last) + 1);
+    atualizarPosicaoJogador(caminho);
     return _tabuleiro.obterCaminho(posicaoInicial, finalCaminho);
   }
 
@@ -56,7 +50,11 @@ class CobrasEscadas {
     }
   }
 
-  void _atualizarPosicaoJogador(int novaPosicao) {
+  void atualizarPosicaoJogador(List<List<double>> caminho) {
+    int novaPosicao = _tabuleiro.movimentacoes.indexOf(caminho.last) + 1;
+    if (novaPosicao == 100) {
+      _hasGanhador = true;
+    }
     if (_isJogadorInicial) {
       _jogador1.setPosicaoAtual = novaPosicao;
     } else {
@@ -64,7 +62,19 @@ class CobrasEscadas {
     }
   }
 
+  String obterNomeJogador() {
+    if (_isJogadorInicial) {
+      return _jogador1.nome;
+    } else {
+      return _jogador2.nome;
+    }
+  }
+
   void trocarJogador() {
     _isJogadorInicial = !_isJogadorInicial;
+  }
+
+  bool verificarGanhador() {
+    return _hasGanhador;
   }
 }

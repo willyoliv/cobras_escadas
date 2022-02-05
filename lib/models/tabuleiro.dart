@@ -1,106 +1,106 @@
 class Tabuleiro {
   final List<List<double>> _movimentacoes = [
     // [10, -8],
-    [50, -8],
-    [50, 30],
-    [50, 65],
-    [50, 100],
-    [50, 137],
-    [50, 172],
-    [50, 208],
-    [50, 245],
-    [50, 282],
-    [50, 317],
-    [85, 317],
-    [85, 282],
-    [85, 245],
-    [85, 208],
-    [85, 172],
-    [85, 137],
-    [85, 100],
-    [85, 65],
-    [85, 30],
-    [85, -8],
-    [122, -8],
-    [122, 30],
-    [122, 65],
-    [122, 100],
-    [122, 137],
-    [122, 172],
-    [122, 208],
-    [122, 245],
-    [122, 282],
-    [122, 317],
-    [158, 317],
-    [158, 282],
-    [158, 245],
-    [158, 208],
-    [158, 172],
-    [158, 137],
-    [158, 100],
-    [158, 65],
-    [158, 30],
-    [158, -8],
-    [194, -8],
-    [194, 30],
-    [194, 65],
-    [194, 100],
-    [194, 137],
-    [194, 172],
-    [194, 208],
-    [194, 245],
-    [194, 282],
-    [194, 317],
-    [230, 317],
-    [230, 282],
-    [230, 245],
-    [230, 208],
-    [230, 172],
-    [230, 137],
-    [230, 100],
-    [230, 65],
-    [230, 30],
-    [230, -8],
-    [267, -8],
-    [267, 30],
-    [267, 65],
-    [267, 100],
-    [267, 137],
-    [267, 172],
-    [267, 208],
-    [267, 245],
-    [267, 282],
-    [267, 317],
-    [302, 317],
-    [302, 282],
-    [302, 245],
-    [302, 208],
-    [302, 172],
-    [302, 137],
-    [302, 100],
-    [302, 65],
-    [302, 30],
-    [302, -8],
-    [338, -8],
-    [338, 30],
-    [338, 65],
-    [338, 100],
-    [338, 137],
-    [338, 172],
-    [338, 208],
-    [338, 245],
-    [338, 282],
-    [338, 317],
-    [374, 317],
-    [374, 282],
-    [374, 245],
-    [374, 208],
-    [374, 172],
-    [374, 137],
-    [374, 100],
-    [374, 65],
-    [374, 30],
-    [374, -8],
+    [30, -8],
+    [30, 30],
+    [30, 65],
+    [30, 100],
+    [30, 137],
+    [30, 172],
+    [30, 208],
+    [30, 245],
+    [30, 282],
+    [30, 317],
+    [65, 317],
+    [65, 282],
+    [65, 245],
+    [65, 208],
+    [65, 172],
+    [65, 137],
+    [65, 100],
+    [65, 65],
+    [65, 30],
+    [65, -8],
+    [102, -8],
+    [102, 30],
+    [102, 65],
+    [102, 100],
+    [102, 137],
+    [102, 172],
+    [102, 208],
+    [102, 245],
+    [102, 282],
+    [102, 317],
+    [138, 317],
+    [138, 282],
+    [138, 245],
+    [138, 208],
+    [138, 172],
+    [138, 137],
+    [138, 100],
+    [138, 65],
+    [138, 30],
+    [138, -8],
+    [174, -8],
+    [174, 30],
+    [174, 65],
+    [174, 100],
+    [174, 137],
+    [174, 172],
+    [174, 208],
+    [174, 245],
+    [174, 282],
+    [174, 317],
+    [210, 317],
+    [210, 282],
+    [210, 245],
+    [210, 208],
+    [210, 172],
+    [210, 137],
+    [210, 100],
+    [210, 65],
+    [210, 30],
+    [210, -8],
+    [247, -8],
+    [247, 30],
+    [247, 65],
+    [247, 100],
+    [247, 137],
+    [247, 172],
+    [247, 208],
+    [247, 245],
+    [247, 282],
+    [247, 317],
+    [282, 317],
+    [282, 282],
+    [282, 245],
+    [282, 208],
+    [282, 172],
+    [282, 137],
+    [282, 100],
+    [282, 65],
+    [282, 30],
+    [282, -8],
+    [318, -8],
+    [318, 30],
+    [318, 65],
+    [318, 100],
+    [318, 137],
+    [318, 172],
+    [318, 208],
+    [318, 245],
+    [318, 282],
+    [318, 317],
+    [354, 317],
+    [354, 282],
+    [354, 245],
+    [354, 208],
+    [354, 172],
+    [354, 137],
+    [354, 100],
+    [354, 65],
+    [354, 30],
+    [354, -8],
   ];
 
   final List<int> _posicoesCabecasDasCobras = [
@@ -115,7 +115,7 @@ class Tabuleiro {
     95,
     99
   ];
-  final List<int> _posicoesBaseDasEscadas = [
+  final List<int> _posicoesIniciaisDasEscadas = [
     2,
     7,
     8,
@@ -182,146 +182,140 @@ class Tabuleiro {
           .reversed
           .toList();
       caminho = [...caminho, ...caminhoCasasExtras];
-      if (_posicoesCabecasDasCobras.contains(posicaoMovimentosParaAtras)) {
-        switch (posicaoMovimentosParaAtras) {
-          case 92:
-            for (var item in _caminhoDescidaNaCobra92) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 95:
-            for (var item in _caminhoDescidaNaCobra95) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 99:
-            for (var item in _caminhoDescidaNaCobra99) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          default:
-        }
-      }
       return caminho;
     } else {
       caminho = _movimentacoes.sublist(posicaoInicial, posicaoFinal);
-      print("caminho $caminho");
-      if (_posicoesBaseDasEscadas.contains(posicaoFinal)) {
-        switch (posicaoFinal) {
-          case 2:
-            for (var item in _caminhoSubidaEscada2) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 7:
-            for (var item in _caminhoSubidaEscada7) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 8:
-            for (var item in _caminhoSubidaEscada8) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 15:
-            for (var item in _caminhoSubidaEscada15) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 21:
-            for (var item in _caminhoSubidaEscada21) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 28:
-            for (var item in _caminhoSubidaEscada28) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 36:
-            for (var item in _caminhoSubidaEscada36) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 51:
-            for (var item in _caminhoSubidaEscada51) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 71:
-            for (var item in _caminhoSubidaEscada71) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 78:
-            for (var item in _caminhoSubidaEscada78) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 87:
-            for (var item in _caminhoSubidaEscada87) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          default:
-        }
-      } else if (_posicoesCabecasDasCobras.contains(posicaoFinal)) {
-        switch (posicaoFinal) {
-          case 16:
-            for (var item in _caminhoDescidaNaCobra16) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 46:
-            for (var item in _caminhoDescidaNaCobra46) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 49:
-            for (var item in _caminhoDescidaNaCobra49) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 62:
-            for (var item in _caminhoDescidaNaCobra62) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 64:
-            for (var item in _caminhoDescidaNaCobra64) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 74:
-            for (var item in _caminhoDescidaNaCobra74) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 89:
-            for (var item in _caminhoDescidaNaCobra89) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 92:
-            for (var item in _caminhoDescidaNaCobra92) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 95:
-            for (var item in _caminhoDescidaNaCobra95) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          case 99:
-            for (var item in _caminhoDescidaNaCobra99) {
-              caminho.add(_movimentacoes[item]);
-            }
-            break;
-          default:
-        }
-      }
     }
 
+    return caminho;
+  }
+
+  bool verificarSePosicaoECabecaDeCobra(int posicao) {
+    return _posicoesCabecasDasCobras.contains(posicao);
+  }
+
+  bool verificarSePosicaoEInicioDaEscada(int posicao) {
+    return _posicoesIniciaisDasEscadas.contains(posicao);
+  }
+
+  List<List<double>> obterCaminhoUsandoEscada(int posicao) {
+    List<List<double>> caminho = [];
+    switch (posicao) {
+      case 2:
+        for (var item in _caminhoSubidaEscada2) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 7:
+        for (var item in _caminhoSubidaEscada7) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 8:
+        for (var item in _caminhoSubidaEscada8) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 15:
+        for (var item in _caminhoSubidaEscada15) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 21:
+        for (var item in _caminhoSubidaEscada21) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 28:
+        for (var item in _caminhoSubidaEscada28) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 36:
+        for (var item in _caminhoSubidaEscada36) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 51:
+        for (var item in _caminhoSubidaEscada51) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 71:
+        for (var item in _caminhoSubidaEscada71) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 78:
+        for (var item in _caminhoSubidaEscada78) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 87:
+        for (var item in _caminhoSubidaEscada87) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      default:
+    }
+    return caminho;
+  }
+
+  List<List<double>> obterCaminhoDaCobra(int posicao) {
+    List<List<double>> caminho = [];
+    switch (posicao) {
+      case 16:
+        for (var item in _caminhoDescidaNaCobra16) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 46:
+        for (var item in _caminhoDescidaNaCobra46) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 49:
+        for (var item in _caminhoDescidaNaCobra49) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 62:
+        for (var item in _caminhoDescidaNaCobra62) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 64:
+        for (var item in _caminhoDescidaNaCobra64) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 74:
+        for (var item in _caminhoDescidaNaCobra74) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 89:
+        for (var item in _caminhoDescidaNaCobra89) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 92:
+        for (var item in _caminhoDescidaNaCobra92) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 95:
+        for (var item in _caminhoDescidaNaCobra95) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      case 99:
+        for (var item in _caminhoDescidaNaCobra99) {
+          caminho.add(_movimentacoes[item]);
+        }
+        break;
+      default:
+    }
     return caminho;
   }
 }

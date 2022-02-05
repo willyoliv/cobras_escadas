@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import 'package:cobras_escadas/shared/theme/colors/app_colors.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -17,14 +19,22 @@ class Home extends StatelessWidget {
               const Spacer(),
               Container(
                 margin: const EdgeInsets.only(left: 30),
-                child: Lottie.asset("assets/lottie/snake-ladders-game.json",
+                child: Lottie.asset("assets/lottie/tabuleiro_animacao.json",
                     repeat: true),
               ),
               const Text(
-                "Bem-vindo",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                "Cobras e Escadas",
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              const Text("Este é o jogo bla bla bla bla"),
+              const Text(
+                "Bem-vindo",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
               const Spacer(),
               Container(
                 margin: const EdgeInsets.only(bottom: 30),
@@ -34,7 +44,7 @@ class Home extends StatelessWidget {
                     style: TextStyle(fontSize: 16),
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF9AD0AC),
+                    primary: AppColors.roxo,
                     elevation: 0,
                     padding: const EdgeInsets.all(15),
                     shape: RoundedRectangleBorder(
