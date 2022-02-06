@@ -41,7 +41,7 @@ deve obrigatoriamente exibir o board do jogo e as representações dos jogadores
 
 ---
 ## 🚀 Como Executar o Projeto
-Abaixo são apresentados os passos necessários para que o App funcione.
+Os testes foram realizados nos emuladores Pixel 3A e Nexus 4. Abaixo são apresentados os passos necessários para que o App funcione. 
 
 ### 📃 Pré-requisitos
 
@@ -67,7 +67,6 @@ $ flutter run
 
 
 ```
-
 ---
 
 ## 🛠 Recursos
